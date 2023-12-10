@@ -1,0 +1,35 @@
+abstract class Animal {
+    abstract void walk();
+
+    void eat() {
+        System.out.println("Animal eats.....");
+    }
+
+    Animal() {
+        System.out.println("Animal's constructor.");
+    }
+}
+
+class Horse extends Animal {
+    public void walk() {
+        System.out.println("Walks on 4 legs");
+    }
+
+    Horse() {
+        System.out.println("Horse's constructor.");
+    }
+}
+
+class Chicken extends Animal {
+    void walk() {
+        System.out.println("Walks on 2 legs");
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Animal ob = new Horse();
+        ob.walk();
+        ob.eat();
+    }
+}
