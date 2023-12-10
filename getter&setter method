@@ -1,0 +1,39 @@
+class Account {
+    // Public attribute 'name' accessible outside the class
+    public String name; 
+
+    // Protected attribute 'email' accessible within the same package and subclasses
+    protected String email; 
+
+    // Private attribute 'password' accessible only within this class
+    private String password;    
+
+    // Getter method to retrieve the value of 'password'
+    public String getPassword() {
+        return this.password;
+    }
+
+    // Setter method to set the value of 'password'
+    public void setPassword(String pass) {
+        password = pass;
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        // Creating an instance of the Account class
+        Account acc_1 = new Account();
+
+        
+        // Setting the value of the 'name' public attribute of the Account object 
+        acc_1.name = "DIU";             
+        // Setting the value of the 'email' protected attribute of the Account object
+        acc_1.email = "diu.edu.bd";     
+
+        // Setting the value of the private 'password' attribute using the setter method
+        acc_1.setPassword("abcdef");  
+
+        // Retrieving and printing the value of the 'password' attribute using the getter method
+        System.out.println(acc_1.getPassword());  
+    }
+}
