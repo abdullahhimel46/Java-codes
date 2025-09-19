@@ -1,0 +1,18 @@
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("n = ");
+        int n = sc.nextInt(); 
+        
+        int a=0,b=1;
+            for(int i=a+b;i<=n; i++){
+                int tmp=b;
+                b=a+b;
+                a=tmp;
+            }
+        
+         System.out.println("n-th fibo digit: "+b);
+         System.out.println("(n-1)-th fibo digit: "+a);
+    }
+}
